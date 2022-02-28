@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% import "bootstrap5/form.html" as wtf %}
+{% from 'bootstrap/form.html' import render_field, render_form %}
+
+{% block title %}
+  Edit Vinyl
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% for field, errors in form.errors.items() %}
+                {{ ', '.join(errors) }}
+            {% endfor %}
+                <h1>Edit Vinyl</h1>
+            <br/>
+            <form method="post" enctype="multipart/form-data">
+            {{ form.csrf_token() }}
+            Catno
+                <div class="form-group required">
+                {{ form.Catno(class="form-control",id="Catno",required="required",type="text") }}
+                </div>
+            Artist
+                <div class="form-group required">
+                {{ form.Artist(class="form-control",id="Artist",required="required",type="text") }}
+                </div>
+            Album
+            <div class="form-group required">
+                {{ form.Album(class="form-control",id="Album",type="text") }}
+            </div>
+            Sleeve Grade
+            <div class="form-group required">
+                {{ form.Sleeve_Grade(class="form-control",id="Sleeve_Grade",type="text") }}
+            </div>
+            Record Grade
+            <div class="form-group required">
+                {{ form.Record_Grade(class="form-control",id="Record_Grade",type="text") }}
+            </div>
+            Price
+            <div class="form-group required">
+                {{ form.Price(class="form-control",id="Price",type="text") }}
+            </div>
+            Comments
+            <div class="form-group required">
+                {{ form.Comments(class="form-control",id="Comments",type="text") }}
+            </div> 
+            <!-- <div class="form-group">
+                {{ form.Pictures(class="form-control",id="Pictures",type="text",value="") }}
+            </div> -->
+            {{ render_field(form.Pictures) }}
+            {% for image in entry.images %}
+                <div class="image-area" id="image-area-{{ image.id }}">
+                    <img id="{{ image.id }}" src='/uploads/images/thumbnails/{{ image.file_name }}'>
+                    <a class="remove-image" href="#" style="display: inline;">&#215;</a>
+                </div>
+            {% endfor %}
+            {{ form.submit(class="btn btn-success btn-block") }}
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.3/b-2.2.1/b-colvis-2.2.1/b-html5-2.2.1/fh-3.2.1/datatables.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    $('.image-area').on('click','a.remove-image',function () {
+        var image_id = $(this).parent('div').children('img').attr('id')
+        Swal.fire({
+        title: 'Are you sure you want to delete image '+JSON.stringify(image_id)+'?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+        }).then((willDelete) => {
+        if (willDelete.isConfirmed) {
+            document.getElementById('image-area-'+image_id).remove();
+
+            $.ajax({
+                url: '/admin/items/vinyls/delete/image/'+image_id,
+                type: 'POST'
+            })  
+            Swal.fire(
+            'Deleted!',
+            JSON.stringify(image_id)+' has been deleted.',
+            'success'
+            )
+        } else {
+        swal("Your imaginary file is safe!");
+        }
+        });
+    });
+
+});
+</script>
+{% endblock %}

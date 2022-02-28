@@ -1,0 +1,40 @@
+{% import "bootstrap5/utils.html" as utils %}
+{% import "bootstrap5/form.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<div class="content-section">
+  <br>
+  {{ utils.render_messages() }}
+  <div class="center login">
+    <h1 class="text-center">Log in to your account</h1>
+    <form action="" method="POST" role="form" class="form">
+      {{ form.hidden_tag() }} {{ wtf.render_hidden_errors(form) }}
+      {% if form.email.errors %}
+        <div class="form-group  required has-error">
+          {{ form.email(class="form-control",id="email",required="required",type="text",value="",placeholder="Email") }}
+          {% for error in form.email.errors %}
+          <p class="help-block">{{ error }}</p>
+          {% endfor %}
+      {% else %}
+        <div class="form-group  required">
+          {{ form.email(class="form-control",id="email",required="required",type="text",value="",placeholder="Email") }}
+      {% endif %}
+        </div>
+      {% if form.password.errors %}
+      <div class="form-group  required">
+        {{ form.password(class="form-control",id="password",required="required",type="password",value="",placeholder="Password") }}
+        {% for error in form.password.errors %}
+        <p class="help-block">{{ error }}</p>
+        {% endfor %}
+      {% else %}
+        <div class="form-group  required">
+          {{ form.password(class="form-control",id="password",required="required",type="password",value="",placeholder="Password") }}
+      {% endif %}
+          </div>
+      {{ form.submit(class="btn btn-success btn-block") }}
+      <a href="{{ url_for('auth.register') }}" class="btn btn-danger btn-block" role="button">Register</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+{% import 'bootstrap/utils.html' as utils %}
+{% from 'bootstrap/form.html' import render_field, render_form %}
+{% block title %}Item Types{% endblock %}
+{% block body %}
+
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <br>{{ utils.render_messages() }}</br>
+        <h1 style="text-align:center;">Item Types</h1>
+          <hr class="intro-divider" style="margin: auto;">
+
+          <div class="center">
+            <table class="table table-striped table-bordered display" id="data" style="width:100%;">
+              <thead>
+                <tr>
+                  <th class="text-center"></th>
+                  <th class="text-center"> ID </th>
+                  <th class="text-center"> Name </th>
+                  <th class="text-center"> Entry Date </th>
+                  <th class="text-center"> Entry User </th>
+                  <th class="text-center"> Edit Date </th>
+                  <th class="text-center"> Edited by </th>
+                  <th class="text-center"></th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th class="text-center"></th>
+                  <th class="text-center"> ID </th>
+                  <th class="text-center"> Name </th>
+                  <th class="text-center"> Entry Date </th>
+                  <th class="text-center"> Entry User </th>
+                  <th class="text-center"> Edit Date </th>
+                  <th class="text-center"> Edited by </th>
+                  <th class="text-center"></th>
+                </tr>
+            </tfoot>
+            </table>
+          </div>
+          <div style="text-align: center">
+          <a  class="btn btn-default btn-lg add bottom" data-toggle="modal" data-target="#modal-form">
+            <i class="fa fa-plus"></i>
+            Add Item Type
+          </a>
+
+          <div class="modal top fade" id="modal-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+            <div class="modal-dialog   modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add Item Type</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{ modal_messages() }}
+                  <form method="post" novalidate>
+                    {{ form.csrf_token() }}
+                    {{ render_field(form.name) }}
+                </div>
+                <div class="modal-footer">
+                  {{ render_field(form.submit) }}
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal top fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Edit Item Type</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+{% endblock %}
+
+{% block javascript %}
+
+{{ bootstrap.load_js() }} 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.3/b-2.2.1/b-colvis-2.2.1/b-html5-2.2.1/fh-3.2.1/datatables.min.js"></script>
+<script>
+function format ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Full name:</td>'+
+            '<td>'+d.name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extension number:</td>'+
+            '<td>'+d.id+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extra info:</td>'+
+            '<td>And any further details here (images etc)...</td>'+
+        '</tr>'+
+    '</table>';
+}
+
+$(document).ready(function() {
+
+  $('#data thead tr')
+    .clone(true)
+    .addClass('filters')
+    .appendTo('#data thead');
+
+  var table = $('#data').DataTable( {
+    "processing": true,
+    ajax: '/api/item_types',
+    serverSide: true,
+    columnDefs: [ {
+      targets: [-1,0],
+      className: 'noVis dt-center vert-align',
+      searchable:false,
+      orderable:false
+      },
+      {
+      targets: "_all",
+      className: 'dt-center vert-align'
+    } ],
+    columns: [
+      {
+          "className":      'details-control dt-center vert-align',
+          "data":           null,
+          "defaultContent": '',
+          "render": function () {
+                         return '<i class="fa fa-plus-square fa-lg" aria-hidden="true"></i>';
+          },
+          width:"15px"
+      },
+      {data: 'id'},
+      {data: 'name'},
+      {data: 'entry_date'},
+      {data: 'user_id'},
+      {data: 'edit_date'},
+      {data: 'edit_user_id'},
+      {
+        data: null,
+        defaultContent: 
+        '<button name="edit"  id="edit" class="btn btn-default btn-sm edit"><i class="fas fa-edit fa-lg"></i></button><button name="delete"  id="delete" class="btn btn-default btn-sm delete"><i class="fas fa-trash fa-lg" aria-hidden="true"></i></button>'
+      }
+    ],
+    dom: "<'row'<'col-md-6'B><'col-md-6'lf>>" +
+          "<'row'<'col-md-6'><'col-md-6'>>" +
+          "<'row'<'col-md-12't>><'row'<'col-md-12'ip>>",
+    buttons: [{
+      extend: 'columnsToggle',
+      columns: ':not(.noVis)'
+    }],
+    orderCellsTop: true,
+    fixedHeader: true,
+    "order": [[1, 'desc']],
+
+    initComplete: function () {
+      var api = this.api();
+
+      // For each column
+      api
+      .columns()
+      .eq(0)
+      .each(function (colIdx) {
+        // Set the header cell to contain the input element
+        var cell = $('.filters th:not(:last):not(:first)').eq(
+            $(api.column(colIdx).header()).index()
+        );
+        var title = $(cell).text();
+        $(cell).html('<input type="text" style="width:100%" placeholder="" />');
+
+        // On every keypress in this input
+        $(
+          'input',
+          $('.filters th').eq($(api.column(colIdx).header()).index())
+        )
+        .off('keyup change')
+        .on('keyup change', function (e) {
+          e.stopPropagation();
+
+          // Get the search value
+          $(this).attr('title', $(this).val());
+          var regexr = '{search}'; //$(this).parents('th').find('select').val();
+
+          var cursorPosition = this.selectionStart;
+          // Search the column for that value
+          api
+              .column(colIdx)
+              .search(
+                  this.value != ''
+                      ? regexr.replace('{search}', this.value )
+                      : '',
+                  this.value != '',
+                  this.value == ''
+              )
+              .draw();
+
+          $(this)
+              .focus()[0]
+              .setSelectionRange(cursorPosition, cursorPosition);
+        });
+      });
+    },
+  });
+
+  new $.fn.dataTable.Buttons( table, {
+    buttons: [
+        {
+          extend: 'excelHtml5',
+          exportOptions: {
+            columns: ':visible :not(.noVis)'
+          }
+        },
+        {
+          extend: 'pdfHtml5',
+          exportOptions: {
+            columns: ':visible :not(.noVis)'
+          }
+        }
+    ]
+  } );
+
+  table.buttons( 1, null ).container().appendTo(
+      table.table().container()
+  );
+
+
+
+  $('#data').on('click','button.delete',function () {
+    var data = table.row( $(this).parents('tr') ).data()
+    var row= this.parentNode.parentNode;
+    Swal.fire({
+      title: 'Are you sure you want to delete item type '+JSON.stringify(data.name)+'?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((willDelete) => {
+    if (willDelete.isConfirmed) {
+      document.getElementById("data").deleteRow(row.rowIndex);
+  
+      new_item = $('#data').val() //value I want to send
+      $.ajax({
+          url: '/admin/itemtypes/delete/'+JSON.stringify(data.id),
+          type: 'POST',
+          success: function(response){
+              $('#main').text(response)
+          }
+      })  
+      Swal.fire(
+      'Deleted!',
+      JSON.stringify(data.name)+' has been deleted.',
+      'success'
+    )
+    } else {
+      swal("Your imaginary file is safe!");
+    }
+    });
+  });
+
+  $('#data').on('click','button.edit',function () {
+    var data = table.row( $(this).parents('tr') ).data()
+    location.href = "/admin/itemtypes/edit/"+JSON.stringify(data.id);
+  });
+
+  $('#data tbody').on( 'click', 'tr', function () {
+        $(this).toggleClass('selected');
+  } );
+   // Add event listener for opening and closing details
+   $('#data tbody').on('click', 'td.details-control.dt-center', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+});
+</script>
+
+<script>
+
+</script>
+{% endblock %}

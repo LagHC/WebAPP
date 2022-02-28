@@ -1,0 +1,268 @@
+/* app/static/css/style.css */
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    font-size:small;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    clear: both;
+}
+
+.navbar-custom{
+    height:40px;
+    font-size:small;
+    z-index: 9999;
+}
+
+.navbar, h1, h2, h3 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.navbar .navbar-nav > .nav-link:hover, .navbar .active {
+    background-color: #FFFF00;
+}
+
+a, .navbar .navbar-brand, .navbar .navbar-nav>li>a {
+  color: #353333;
+}
+
+a:hover, .navbar .navbar-brand:hover, .navbar .navbar-nav>a:hover {
+  color: #080713;
+}
+
+.link {
+    color: #0066CC;
+    cursor:pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.link:hover {
+    color: #025ab3
+}
+
+footer {
+    background-color: #f8f8f8;
+    height:50px;
+    text-align: center;
+    clear:both;
+    align-items:center;
+    position: relative;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+.alert-info {
+    width: 50%;
+    margin: auto;
+    color: #687430;
+    background-color: #e6ecca;
+    border-color: #aec251;
+}
+
+.btn-default {
+    border-color: #aec251;
+    color: #000000;
+}
+
+.add:hover{
+    background-color: #0fe933 !important;
+}
+
+.btn-default:hover {
+    background-color: #FFFF00;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.login, .register {
+    width: 40%;
+}
+
+.footer, .push {
+    clear: both;
+    height: 4em;
+}  
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-header {
+    /* padding-top:51px; */
+    text-align: center;
+    color: #080202;
+    display: block;
+    overflow: auto;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    margin:auto;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.topnav {
+    font-size: 14px;
+}
+
+.wrapper {
+    min-height:90%;
+    height: auto !important;
+    overflow: auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer {
+    display: table;
+    height: 70%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.paginate_button { padding: 0!important; margin-left: 0!important; }
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.delete:hover{
+    background-color: #ff5100 !important;
+}
+
+.alert{
+    width:50%;
+    margin: auto;
+}
+
+/* .form-group {
+    width: 50%;
+} */
+
+.dropzone {
+    box-shadow: 0px 2px 20px 0px #f2f2f2;
+    border: 1px dashed #c0ccda;
+    padding: 60x;
+    border-radius: 10px;
+    background-color: #fbfdff;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.bottom {
+    margin-bottom:10px;
+}
+
+.image-area {
+    display:inline;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #333;
+}
+.image-area img{
+    max-width: 200px;
+    height: auto;
+}
+.remove-image {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 10em;
+    padding: 2px 6px 3px;
+    text-decoration: none;
+    font: 700 21px/20px sans-serif;
+    background: #555;
+    border: 3px solid #fff;
+    color: #FFF;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        -webkit-transition: background 0.5s;
+        transition: background 0.5s;
+}
+.remove-image:hover {
+    background: #E54E4E;
+    padding: 3px 7px 5px;
+    top: -11px;
+right: -11px;
+}
+.remove-image:active {
+    background: #E54E4E;
+    top: -10px;
+right: -11px;
+}
+
+.form-group.required {
+    padding-bottom: 5px;
+}
+
+.vert-align {
+    vertical-align: middle;
+}

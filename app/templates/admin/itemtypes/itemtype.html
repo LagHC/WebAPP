@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% import "bootstrap5/form.html" as wtf %}
+{% from 'bootstrap/form.html' import render_field, render_form %}
+
+{% block title %}
+  Edit Item Type
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if add_item_type %}
+                <h1>Add Item Type</h1>
+            {% else %}
+                <h1>Edit Item Type</h1>
+            {% endif %}
+            <br/>
+            {{ wtf.render_form(form2) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
