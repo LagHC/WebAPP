@@ -1,235 +1,85 @@
-2022-02-28 04:11:30,231: INFO - _log:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2022-02-28 04:11:30,684: INFO - info: SHOW VARIABLES LIKE 'sql_mode'
-2022-02-28 04:11:30,684: INFO - info: [raw sql] ()
-2022-02-28 04:11:30,687: INFO - info: SHOW VARIABLES LIKE 'lower_case_table_names'
-2022-02-28 04:11:30,688: INFO - info: [generated in 0.00059s] ()
-2022-02-28 04:11:30,692: INFO - info: SELECT DATABASE()
-2022-02-28 04:11:30,692: INFO - info: [raw sql] ()
-2022-02-28 04:11:30,694: INFO - info: BEGIN (implicit)
-2022-02-28 04:11:30,697: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
+2022-02-28 04:51:42,516: INFO - _log:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-28 04:51:43,289: INFO - info: SHOW VARIABLES LIKE 'sql_mode'
+2022-02-28 04:51:43,290: INFO - info: [raw sql] ()
+2022-02-28 04:51:43,293: INFO - info: SHOW VARIABLES LIKE 'lower_case_table_names'
+2022-02-28 04:51:43,293: INFO - info: [generated in 0.00061s] ()
+2022-02-28 04:51:43,296: INFO - info: SELECT DATABASE()
+2022-02-28 04:51:43,296: INFO - info: [raw sql] ()
+2022-02-28 04:51:43,297: INFO - info: BEGIN (implicit)
+2022-02-28 04:51:43,302: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
 FROM users 
 WHERE users.id = %s
-2022-02-28 04:11:30,697: INFO - info: [generated in 0.00084s] (1,)
-2022-02-28 04:11:30,700: INFO - info: ROLLBACK
-2022-02-28 04:11:30,701: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:11:30] "GET /authenticate?code=v%5E1.1%23i%5E1%23f%5E0%23p%5E3%23I%5E3%23r%5E1%23t%5EUl41XzEwOkRGMTcyN0VCMkVENjMzNkVCM0VGNUE3NUNDNjVFRTA1XzJfMSNFXjEyODQ%3D&expires_in=299 HTTP/1.1" 200 -
-2022-02-28 04:13:38,396: INFO - info: BEGIN (implicit)
-2022-02-28 04:13:38,397: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
-FROM users 
-WHERE users.id = %s
-2022-02-28 04:13:38,398: INFO - info: [cached since 127.7s ago] (1,)
-2022-02-28 04:13:38,420: INFO - info: ROLLBACK
-2022-02-28 04:13:38,421: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:38] "GET / HTTP/1.1" 200 -
-2022-02-28 04:13:38,494: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:38,500: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:38] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:38,502: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:38] "[36mGET /modals/static/css/progressBarStyle.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:38,543: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:38] "[36mGET /modals/static/js/main.js HTTP/1.1[0m" 304 -
-2022-02-28 04:13:38,569: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:38] "[36mGET /static/img/intro-bg.jpg HTTP/1.1[0m" 304 -
-2022-02-28 04:13:40,246: INFO - info: BEGIN (implicit)
-2022-02-28 04:13:40,247: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
-FROM users 
-WHERE users.id = %s
-2022-02-28 04:13:40,248: INFO - info: [cached since 129.6s ago] (1,)
-2022-02-28 04:13:40,391: INFO - info: ROLLBACK
-2022-02-28 04:13:40,392: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:40] "GET /admin/items/vinyls HTTP/1.1" 200 -
-2022-02-28 04:13:40,463: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:40,465: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:40] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:40,472: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:40] "[36mGET /modals/static/css/progressBarStyle.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:40,512: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:40] "[36mGET /modals/static/js/main.js HTTP/1.1[0m" 304 -
-2022-02-28 04:13:40,883: INFO - info: BEGIN (implicit)
-2022-02-28 04:13:40,889: INFO - info: SELECT count(*) AS count_1 
+2022-02-28 04:51:43,303: INFO - info: [generated in 0.00110s] (1,)
+2022-02-28 04:51:43,494: INFO - info: ROLLBACK
+2022-02-28 04:51:43,496: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "GET /admin/items/vinyls HTTP/1.1" 200 -
+2022-02-28 04:51:43,568: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-02-28 04:51:43,568: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+2022-02-28 04:51:43,569: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "[36mGET /modals/static/css/progressBarStyle.css HTTP/1.1[0m" 304 -
+2022-02-28 04:51:43,584: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "[36mGET /modals/static/js/main.js HTTP/1.1[0m" 304 -
+2022-02-28 04:51:43,920: INFO - info: BEGIN (implicit)
+2022-02-28 04:51:43,926: INFO - info: SELECT count(*) AS count_1 
 FROM (SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
 FROM item LEFT OUTER JOIN item_info ON item.id = item_info.item_id LEFT OUTER JOIN vinyl_info ON item_info.id = vinyl_info.item_info_id 
 WHERE item.item_type_id = %s) AS anon_1
-2022-02-28 04:13:40,890: INFO - info: [generated in 0.00102s] (141,)
-2022-02-28 04:13:40,897: INFO - info: SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
+2022-02-28 04:51:43,927: INFO - info: [generated in 0.00113s] (141,)
+2022-02-28 04:51:43,931: INFO - info: SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
 FROM item LEFT OUTER JOIN item_info ON item.id = item_info.item_id LEFT OUTER JOIN vinyl_info ON item_info.id = vinyl_info.item_info_id 
 WHERE item.item_type_id = %s ORDER BY item.id DESC 
  LIMIT %s, %s
-2022-02-28 04:13:40,899: INFO - info: [generated in 0.00131s] (141, 0, 10)
-2022-02-28 04:13:40,904: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
+2022-02-28 04:51:43,932: INFO - info: [generated in 0.00130s] (141, 0, 10)
+2022-02-28 04:51:43,936: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
 FROM item_images 
 WHERE %s = item_images.item_id
-2022-02-28 04:13:40,905: INFO - info: [generated in 0.00100s] (124,)
-2022-02-28 04:13:40,910: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
+2022-02-28 04:51:43,937: INFO - info: [generated in 0.00111s] (124,)
+2022-02-28 04:51:43,941: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
 FROM item_info 
 WHERE %s = item_info.item_id
-2022-02-28 04:13:40,911: INFO - info: [generated in 0.00095s] (124,)
-2022-02-28 04:13:40,917: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
+2022-02-28 04:51:43,943: INFO - info: [generated in 0.00149s] (124,)
+2022-02-28 04:51:43,944: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2022-02-28 04:51:43,949: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
 FROM vinyl_info 
 WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:13:40,919: INFO - info: [generated in 0.00142s] (124,)
-2022-02-28 04:13:40,922: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
+2022-02-28 04:51:43,951: INFO - info: [generated in 0.00138s] (124,)
+2022-02-28 04:51:43,954: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
 FROM item_images 
 WHERE %s = item_images.item_id
-2022-02-28 04:13:40,923: INFO - info: [cached since 0.01943s ago] (123,)
-2022-02-28 04:13:40,926: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
+2022-02-28 04:51:43,954: INFO - info: [cached since 0.01884s ago] (123,)
+2022-02-28 04:51:43,956: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
 FROM item_info 
 WHERE %s = item_info.item_id
-2022-02-28 04:13:40,926: INFO - info: [cached since 0.01614s ago] (123,)
-2022-02-28 04:13:40,928: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
+2022-02-28 04:51:43,956: INFO - info: [cached since 0.01505s ago] (123,)
+2022-02-28 04:51:43,957: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
 FROM vinyl_info 
 WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:13:40,929: INFO - info: [cached since 0.01162s ago] (123,)
-2022-02-28 04:13:40,930: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
+2022-02-28 04:51:43,958: INFO - info: [cached since 0.009064s ago] (123,)
+2022-02-28 04:51:43,960: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
 FROM item_images 
 WHERE %s = item_images.item_id
-2022-02-28 04:13:40,932: INFO - info: [cached since 0.02747s ago] (122,)
-2022-02-28 04:13:40,933: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
+2022-02-28 04:51:43,961: INFO - info: [cached since 0.02495s ago] (122,)
+2022-02-28 04:51:43,962: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
 FROM item_info 
 WHERE %s = item_info.item_id
-2022-02-28 04:13:40,933: INFO - info: [cached since 0.0233s ago] (122,)
-2022-02-28 04:13:40,935: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
+2022-02-28 04:51:43,963: INFO - info: [cached since 0.02142s ago] (122,)
+2022-02-28 04:51:43,964: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
 FROM vinyl_info 
 WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:13:40,936: INFO - info: [cached since 0.01847s ago] (122,)
-2022-02-28 04:13:40,938: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
+2022-02-28 04:51:43,965: INFO - info: [cached since 0.01561s ago] (122,)
+2022-02-28 04:51:43,967: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
 FROM item_images 
 WHERE %s = item_images.item_id
-2022-02-28 04:13:40,939: INFO - info: [cached since 0.03457s ago] (102,)
-2022-02-28 04:13:40,940: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
+2022-02-28 04:51:43,968: INFO - info: [cached since 0.03197s ago] (102,)
+2022-02-28 04:51:43,969: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
 FROM item_info 
 WHERE %s = item_info.item_id
-2022-02-28 04:13:40,941: INFO - info: [cached since 0.03037s ago] (102,)
-2022-02-28 04:13:40,942: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
+2022-02-28 04:51:43,970: INFO - info: [cached since 0.02868s ago] (102,)
+2022-02-28 04:51:43,971: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
 FROM vinyl_info 
 WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:13:40,943: INFO - info: [cached since 0.02562s ago] (102,)
-2022-02-28 04:13:40,947: INFO - info: SELECT count(*) AS count_1 
+2022-02-28 04:51:43,972: INFO - info: [cached since 0.02322s ago] (102,)
+2022-02-28 04:51:43,976: INFO - info: SELECT count(*) AS count_1 
 FROM (SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
 FROM item) AS anon_1
-2022-02-28 04:13:40,948: INFO - info: [generated in 0.00074s] ()
-2022-02-28 04:13:40,951: INFO - info: ROLLBACK
-2022-02-28 04:13:40,953: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:40] "GET /api/vinyl_info?draw=1&columns%5B0%5D%5Bdata%5D=&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=false&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=id&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=images.0&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=false&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=info.vinyl_info.Catno&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=info.vinyl_info.Artist&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=info.vinyl_info.Album&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=info.vinyl_info.Sleeve_Grade&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=info.vinyl_info.Record_Grade&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=info.vinyl_info.Release_Year&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=info.vinyl_info.Styles&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B10%5D%5Bdata%5D=info.vinyl_info.Genres&columns%5B10%5D%5Bname%5D=&columns%5B10%5D%5Bsearchable%5D=true&columns%5B10%5D%5Borderable%5D=false&columns%5B10%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B10%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B11%5D%5Bdata%5D=info.vinyl_info.Labels&columns%5B11%5D%5Bname%5D=&columns%5B11%5D%5Bsearchable%5D=true&columns%5B11%5D%5Borderable%5D=false&columns%5B11%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B11%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B12%5D%5Bdata%5D=info.Comments&columns%5B12%5D%5Bname%5D=&columns%5B12%5D%5Bsearchable%5D=true&columns%5B12%5D%5Borderable%5D=false&columns%5B12%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B12%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B13%5D%5Bdata%5D=info.Price&columns%5B13%5D%5Bname%5D=&columns%5B13%5D%5Bsearchable%5D=true&columns%5B13%5D%5Borderable%5D=true&columns%5B13%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B13%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B14%5D%5Bdata%5D=&columns%5B14%5D%5Bname%5D=&columns%5B14%5D%5Bsearchable%5D=false&columns%5B14%5D%5Borderable%5D=false&columns%5B14%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B14%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1646043220751 HTTP/1.1" 200 -
-2022-02-28 04:13:41,156: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:41] "[36mGET /uploads/images/thumbnails/test-2022_02_18-04_06_03_PM-1.jpg HTTP/1.1[0m" 304 -
-2022-02-28 04:13:46,983: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:46] "[36mGET /uploads/images/test-2022_02_18-04_06_03_PM-1.jpg HTTP/1.1[0m" 304 -
-2022-02-28 04:13:57,116: INFO - info: BEGIN (implicit)
-2022-02-28 04:13:57,117: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
-FROM users 
-WHERE users.id = %s
-2022-02-28 04:13:57,118: INFO - info: [cached since 146.4s ago] (1,)
-2022-02-28 04:13:57,121: INFO - info: SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
-FROM item 
-WHERE item.id = %s
-2022-02-28 04:13:57,123: INFO - info: [generated in 0.00126s] (124,)
-2022-02-28 04:13:57,125: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
-FROM item_info 
-WHERE %s = item_info.item_id
-2022-02-28 04:13:57,125: INFO - info: [cached since 16.21s ago] (124,)
-2022-02-28 04:13:57,138: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
-FROM vinyl_info 
-WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:13:57,139: INFO - info: [cached since 16.22s ago] (124,)
-2022-02-28 04:13:57,271: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
-FROM item_images 
-WHERE %s = item_images.item_id
-2022-02-28 04:13:57,271: INFO - info: [cached since 16.37s ago] (124,)
-2022-02-28 04:13:57,274: INFO - info: ROLLBACK
-2022-02-28 04:13:57,275: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:57] "GET /admin/items/vinyls/edit/124 HTTP/1.1" 200 -
-2022-02-28 04:13:57,345: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:57,346: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:57] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:57,349: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:57] "[36mGET /modals/static/css/progressBarStyle.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:57,390: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:57] "[36mGET /modals/static/js/main.js HTTP/1.1[0m" 304 -
-2022-02-28 04:13:57,395: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:57] "[36mGET /uploads/images/thumbnails/test-2022_02_18-04_06_03_PM-1.jpg HTTP/1.1[0m" 304 -
-2022-02-28 04:13:59,455: INFO - info: BEGIN (implicit)
-2022-02-28 04:13:59,456: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
-FROM users 
-WHERE users.id = %s
-2022-02-28 04:13:59,457: INFO - info: [cached since 148.8s ago] (1,)
-2022-02-28 04:13:59,477: INFO - info: ROLLBACK
-2022-02-28 04:13:59,478: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:59] "GET /admin/itemtypes HTTP/1.1" 200 -
-2022-02-28 04:13:59,542: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:59,542: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:59] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:59,550: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:59] "[36mGET /modals/static/css/progressBarStyle.css HTTP/1.1[0m" 304 -
-2022-02-28 04:13:59,583: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:59] "[36mGET /modals/static/js/main.js HTTP/1.1[0m" 304 -
-2022-02-28 04:13:59,884: INFO - info: BEGIN (implicit)
-2022-02-28 04:13:59,888: INFO - info: SELECT count(*) AS count_1 
-FROM (SELECT item_type.id AS item_type_id, item_type.name AS item_type_name, item_type.entry_date AS item_type_entry_date, item_type.edit_date AS item_type_edit_date, item_type.edit_user_id AS item_type_edit_user_id, item_type.user_id AS item_type_user_id 
-FROM item_type) AS anon_1
-2022-02-28 04:13:59,889: INFO - info: [generated in 0.00121s] ()
-2022-02-28 04:13:59,895: INFO - info: SELECT item_type.id AS item_type_id, item_type.name AS item_type_name, item_type.entry_date AS item_type_entry_date, item_type.edit_date AS item_type_edit_date, item_type.edit_user_id AS item_type_edit_user_id, item_type.user_id AS item_type_user_id 
-FROM item_type ORDER BY item_type.id DESC 
- LIMIT %s, %s
-2022-02-28 04:13:59,896: INFO - info: [generated in 0.00131s] (0, 10)
-2022-02-28 04:13:59,899: INFO - info: SELECT count(*) AS count_1 
-FROM (SELECT item_type.id AS item_type_id, item_type.name AS item_type_name, item_type.entry_date AS item_type_entry_date, item_type.edit_date AS item_type_edit_date, item_type.edit_user_id AS item_type_edit_user_id, item_type.user_id AS item_type_user_id 
-FROM item_type) AS anon_1
-2022-02-28 04:13:59,900: INFO - info: [cached since 0.01266s ago] ()
-2022-02-28 04:13:59,903: INFO - info: ROLLBACK
-2022-02-28 04:13:59,904: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:13:59] "GET /api/item_types?draw=1&columns%5B0%5D%5Bdata%5D=&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=false&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=id&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=name&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=entry_date&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=user_id&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=edit_date&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=edit_user_id&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=false&columns%5B7%5D%5Borderable%5D=false&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1646043239804 HTTP/1.1" 200 -
-2022-02-28 04:14:00,458: INFO - info: BEGIN (implicit)
-2022-02-28 04:14:00,459: INFO - info: SELECT users.id AS users_id, users.email AS users_email, users.username AS users_username, users.password_hash AS users_password_hash, users.first_name AS users_first_name, users.last_name AS users_last_name, users.is_mod AS users_is_mod, users.is_admin AS users_is_admin 
-FROM users 
-WHERE users.id = %s
-2022-02-28 04:14:00,460: INFO - info: [cached since 149.8s ago] (1,)
-2022-02-28 04:14:00,465: INFO - info: ROLLBACK
-2022-02-28 04:14:00,466: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "GET /admin/items/vinyls HTTP/1.1" 200 -
-2022-02-28 04:14:00,535: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2022-02-28 04:14:00,536: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
-2022-02-28 04:14:00,539: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "[36mGET /modals/static/css/progressBarStyle.css HTTP/1.1[0m" 304 -
-2022-02-28 04:14:00,572: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "[36mGET /modals/static/js/main.js HTTP/1.1[0m" 304 -
-2022-02-28 04:14:00,882: INFO - info: BEGIN (implicit)
-2022-02-28 04:14:00,883: INFO - info: SELECT count(*) AS count_1 
-FROM (SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
-FROM item LEFT OUTER JOIN item_info ON item.id = item_info.item_id LEFT OUTER JOIN vinyl_info ON item_info.id = vinyl_info.item_info_id 
-WHERE item.item_type_id = %s) AS anon_1
-2022-02-28 04:14:00,884: INFO - info: [cached since 20s ago] (141,)
-2022-02-28 04:14:00,886: INFO - info: SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
-FROM item LEFT OUTER JOIN item_info ON item.id = item_info.item_id LEFT OUTER JOIN vinyl_info ON item_info.id = vinyl_info.item_info_id 
-WHERE item.item_type_id = %s ORDER BY item.id DESC 
- LIMIT %s, %s
-2022-02-28 04:14:00,887: INFO - info: [cached since 19.99s ago] (141, 0, 10)
-2022-02-28 04:14:00,889: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
-FROM item_images 
-WHERE %s = item_images.item_id
-2022-02-28 04:14:00,890: INFO - info: [cached since 19.99s ago] (124,)
-2022-02-28 04:14:00,892: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
-FROM item_info 
-WHERE %s = item_info.item_id
-2022-02-28 04:14:00,893: INFO - info: [cached since 19.98s ago] (124,)
-2022-02-28 04:14:00,896: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
-FROM vinyl_info 
-WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:14:00,897: INFO - info: [cached since 19.98s ago] (124,)
-2022-02-28 04:14:00,899: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
-FROM item_images 
-WHERE %s = item_images.item_id
-2022-02-28 04:14:00,900: INFO - info: [cached since 20s ago] (123,)
-2022-02-28 04:14:00,902: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
-FROM item_info 
-WHERE %s = item_info.item_id
-2022-02-28 04:14:00,902: INFO - info: [cached since 19.99s ago] (123,)
-2022-02-28 04:14:00,905: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
-FROM vinyl_info 
-WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:14:00,906: INFO - info: [cached since 19.99s ago] (123,)
-2022-02-28 04:14:00,908: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
-FROM item_images 
-WHERE %s = item_images.item_id
-2022-02-28 04:14:00,909: INFO - info: [cached since 20.01s ago] (122,)
-2022-02-28 04:14:00,911: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
-FROM item_info 
-WHERE %s = item_info.item_id
-2022-02-28 04:14:00,912: INFO - info: [cached since 20s ago] (122,)
-2022-02-28 04:14:00,913: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
-FROM vinyl_info 
-WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:14:00,914: INFO - info: [cached since 20s ago] (122,)
-2022-02-28 04:14:00,916: INFO - info: SELECT item_images.id AS item_images_id, item_images.item_id AS item_images_item_id, item_images.web_path AS item_images_web_path, item_images.web_path_thumb AS item_images_web_path_thumb, item_images.file_name AS item_images_file_name 
-FROM item_images 
-WHERE %s = item_images.item_id
-2022-02-28 04:14:00,917: INFO - info: [cached since 20.01s ago] (102,)
-2022-02-28 04:14:00,918: INFO - info: SELECT item_info.id AS item_info_id, item_info.item_id AS item_info_item_id, item_info.`Comments` AS `item_info_Comments`, item_info.`Price` AS `item_info_Price` 
-FROM item_info 
-WHERE %s = item_info.item_id
-2022-02-28 04:14:00,919: INFO - info: [cached since 20.01s ago] (102,)
-2022-02-28 04:14:00,920: INFO - info: SELECT vinyl_info.id AS vinyl_info_id, vinyl_info.item_info_id AS vinyl_info_item_info_id, vinyl_info.`Catno` AS `vinyl_info_Catno`, vinyl_info.`Artist` AS `vinyl_info_Artist`, vinyl_info.`Album` AS `vinyl_info_Album`, vinyl_info.`Sleeve_Grade` AS `vinyl_info_Sleeve_Grade`, vinyl_info.`Record_Grade` AS `vinyl_info_Record_Grade`, vinyl_info.`Release_Year` AS `vinyl_info_Release_Year`, vinyl_info.`Labels` AS `vinyl_info_Labels`, vinyl_info.`Genres` AS `vinyl_info_Genres`, vinyl_info.`Styles` AS `vinyl_info_Styles`, vinyl_info.`wasScanned` AS `vinyl_info_wasScanned`, vinyl_info.`needsManualReview` AS `vinyl_info_needsManualReview` 
-FROM vinyl_info 
-WHERE %s = vinyl_info.item_info_id
-2022-02-28 04:14:00,921: INFO - info: [cached since 20s ago] (102,)
-2022-02-28 04:14:00,924: INFO - info: SELECT count(*) AS count_1 
-FROM (SELECT item.id AS item_id, item.user_id AS item_user_id, item.entry_time AS item_entry_time, item.edit_date AS item_edit_date, item.edit_user_id AS item_edit_user_id, item.item_type_id AS item_item_type_id 
-FROM item) AS anon_1
-2022-02-28 04:14:00,925: INFO - info: [cached since 19.98s ago] ()
-2022-02-28 04:14:00,927: INFO - info: ROLLBACK
-2022-02-28 04:14:00,928: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "GET /api/vinyl_info?draw=1&columns%5B0%5D%5Bdata%5D=&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=false&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=id&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=images.0&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=false&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=info.vinyl_info.Catno&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=info.vinyl_info.Artist&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=info.vinyl_info.Album&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=info.vinyl_info.Sleeve_Grade&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=info.vinyl_info.Record_Grade&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=info.vinyl_info.Release_Year&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=info.vinyl_info.Styles&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B10%5D%5Bdata%5D=info.vinyl_info.Genres&columns%5B10%5D%5Bname%5D=&columns%5B10%5D%5Bsearchable%5D=true&columns%5B10%5D%5Borderable%5D=false&columns%5B10%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B10%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B11%5D%5Bdata%5D=info.vinyl_info.Labels&columns%5B11%5D%5Bname%5D=&columns%5B11%5D%5Bsearchable%5D=true&columns%5B11%5D%5Borderable%5D=false&columns%5B11%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B11%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B12%5D%5Bdata%5D=info.Comments&columns%5B12%5D%5Bname%5D=&columns%5B12%5D%5Bsearchable%5D=true&columns%5B12%5D%5Borderable%5D=false&columns%5B12%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B12%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B13%5D%5Bdata%5D=info.Price&columns%5B13%5D%5Bname%5D=&columns%5B13%5D%5Bsearchable%5D=true&columns%5B13%5D%5Borderable%5D=true&columns%5B13%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B13%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B14%5D%5Bdata%5D=&columns%5B14%5D%5Bname%5D=&columns%5B14%5D%5Bsearchable%5D=false&columns%5B14%5D%5Borderable%5D=false&columns%5B14%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B14%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1646043240785 HTTP/1.1" 200 -
-2022-02-28 04:14:00,940: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:14:00] "[36mGET /uploads/images/thumbnails/test-2022_02_18-04_06_03_PM-1.jpg HTTP/1.1[0m" 304 -
+2022-02-28 04:51:43,977: INFO - info: [generated in 0.00082s] ()
+2022-02-28 04:51:43,979: INFO - info: ROLLBACK
+2022-02-28 04:51:43,981: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "GET /api/vinyl_info?draw=1&columns%5B0%5D%5Bdata%5D=&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=false&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=id&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=images.0&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=false&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=info.vinyl_info.Catno&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=info.vinyl_info.Artist&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=info.vinyl_info.Album&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=info.vinyl_info.Sleeve_Grade&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=info.vinyl_info.Record_Grade&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=info.vinyl_info.Release_Year&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=info.vinyl_info.Styles&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B10%5D%5Bdata%5D=info.vinyl_info.Genres&columns%5B10%5D%5Bname%5D=&columns%5B10%5D%5Bsearchable%5D=true&columns%5B10%5D%5Borderable%5D=false&columns%5B10%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B10%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B11%5D%5Bdata%5D=info.vinyl_info.Labels&columns%5B11%5D%5Bname%5D=&columns%5B11%5D%5Bsearchable%5D=true&columns%5B11%5D%5Borderable%5D=false&columns%5B11%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B11%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B12%5D%5Bdata%5D=info.Comments&columns%5B12%5D%5Bname%5D=&columns%5B12%5D%5Bsearchable%5D=true&columns%5B12%5D%5Borderable%5D=false&columns%5B12%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B12%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B13%5D%5Bdata%5D=info.Price&columns%5B13%5D%5Bname%5D=&columns%5B13%5D%5Bsearchable%5D=true&columns%5B13%5D%5Borderable%5D=true&columns%5B13%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B13%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B14%5D%5Bdata%5D=&columns%5B14%5D%5Bname%5D=&columns%5B14%5D%5Bsearchable%5D=false&columns%5B14%5D%5Borderable%5D=false&columns%5B14%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B14%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1646045503815 HTTP/1.1" 200 -
+2022-02-28 04:51:43,992: INFO - _log: 127.0.0.1 - - [28/Feb/2022 04:51:43] "[36mGET /uploads/images/thumbnails/test-2022_02_18-04_06_03_PM-1.jpg HTTP/1.1[0m" 304 -
