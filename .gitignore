@@ -1,3 +1,6 @@
 *.pyc
 instance/
 .venv38/
+app/uploads/images/*
+app/uploads/images/thumbnails/*
+eBay_Oauth_log.txt

@@ -131,8 +131,10 @@ def add_vinyls():
             if allowed_file(pic.filename):
                 ext = os.path.splitext(pic.filename)[1]
                 filename = form.Catno.data + '-' + str(submit_time.strftime("%Y_%m_%d-%I_%M_%S_%p")) + '-' + str(i) + ext
+                filename = filename.replace(" ","")
                 file_location = os.path.join(current_app.config['IMAGE_UPLOAD_PATH'],filename)
                 thumbnail = form.Catno.data + '-' + str(submit_time.strftime("%Y_%m_%d-%I_%M_%S_%p")) + '-' + str(i) + ext
+                thumbnail = thumbnail.replace(" ","")
                 thumbnail_location = os.path.join(current_app.config['THUMBNAIL_UPLOAD_PATH'],thumbnail)
                 pic.save(file_location)
                 pic = Image.open(file_location)
@@ -175,7 +177,7 @@ def edit_item_vinyl(id):
 
     form = VinylForm()
     entry = item.query.get_or_404(id)
-    print(entry.info.vinyl_info.Catno,file=sys.stderr)
+
     if request.method == 'GET':
         form.Catno.data = entry.info.vinyl_info.Catno
         form.Artist.data = entry.info.vinyl_info.Artist
@@ -192,8 +194,10 @@ def edit_item_vinyl(id):
             if allowed_file(pic.filename):
                 ext = os.path.splitext(pic.filename)[1]
                 filename = form.Catno.data + '-' + str(submit_time.strftime("%Y_%m_%d-%I_%M_%S_%p")) + '-' + str(i) + ext
+                filename = filename.replace(" ","")
                 file_location = os.path.join(current_app.config['IMAGE_UPLOAD_PATH'],filename)
                 thumbnail = form.Catno.data + '-' + str(submit_time.strftime("%Y_%m_%d-%I_%M_%S_%p")) + '-' + str(i) + ext
+                thumbnail = thumbnail.replace(" ","")
                 thumbnail_location = os.path.join(current_app.config['THUMBNAIL_UPLOAD_PATH'],thumbnail)
                 pic.save(file_location)
                 pic = Image.open(file_location)
@@ -220,7 +224,7 @@ def edit_item_vinyl(id):
         return redirect(url_for('admin.add_vinyls'))
     
     # form.name.data = itemtype.name
-    return render_template_modal('admin/items/vinyls/edit.html', action="Edit",
+    return render_template_modal('admin/items/Vinyls/edit.html', action="Edit",
                            add_item_type=add_item_type, form=form,
                            entry=entry, title="Edit Vinyl")
 
@@ -282,7 +286,7 @@ def update_vinyl(id):
 
     results = d.search(catno = Catno)
     wasFound = False
-    for result in results.page(1):
+    for result in results.page(1)[0:10]:
         try:
             release = d.release(result.data['id'])
             print(Artist,file=sys.stderr)
